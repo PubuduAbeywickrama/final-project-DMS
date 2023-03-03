@@ -19,14 +19,12 @@ const UserSchema = new mongoose.Schema(
       required: true,
       min: 6,
     },
+   
     phone:{
       type: String,
       required: true,
     },
-    image: {
-      type: String,
-      required: false,
-    },
+    
   },
   { timestamps: true }
 );

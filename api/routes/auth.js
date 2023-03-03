@@ -29,7 +29,7 @@ router.post("/register", async (req, res) => {
       email: req.body.email,
       password: hashedPassword,
       phone: req.body.phone,
-      image:req.body.image
+      
     });
     console.log(newUser.phone)
 

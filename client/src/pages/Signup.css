@@ -24,3 +24,9 @@
     text-align: center;
     bottom: 20px;
 }
+.btn{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
