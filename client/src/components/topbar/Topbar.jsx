@@ -112,7 +112,7 @@ export default function Topbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem ><a href='/'>Profile</a></MenuItem>
       <MenuItem onClick={logout}><a href='/'>LogOut</a></MenuItem>
     </Menu>
   );

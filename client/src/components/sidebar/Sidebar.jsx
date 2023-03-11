@@ -1,10 +1,11 @@
 import React from 'react'
 import  './sidebar.css'
-import GroupsIcon from '@mui/icons-material/Groups';
+import ChatIcon from '@mui/icons-material/Chat';
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
 import PaymentIcon from '@mui/icons-material/Payment';
 import HomeIcon from '@mui/icons-material/Home';
-
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
+import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 
 export default function Sidebar() {
   return (
@@ -13,29 +14,24 @@ export default function Sidebar() {
           <ul className="sidebarList">
           <hr className='sidebarHr'/>
               <li className="sidebarListItem" >
-                  <HomeIcon className='sidebarIcon'/>
-                  <a href=""><span  className="sidebarListItemText" >
+                  <BloodtypeIcon className='sidebarIcon'/>
+                  <a href="/home"><span  className="sidebarListItemText" >
                     Home
                   </span></a>
               </li>
               <li className="sidebarListItem" >
-                  <GroupsIcon className='sidebarIcon'/>
+                  <MedicalServicesIcon className='sidebarIcon'/>
                   <a href=""><span  className="sidebarListItemText" >
-                    Students
+                    Medications
                   </span></a>
               </li>
               <li className="sidebarListItem" onClick={"/student"}>
-                  <a><NoteAltIcon className='sidebarIcon'/></a>
+                  <a><ChatIcon className='sidebarIcon'/></a>
                   <a className="sidebarListItemText" href=''>
-                    Attendence
+                    Chat with Us
                   </a>
               </li>
-              <li className="sidebarListItem">
-                  <PaymentIcon className='sidebarIcon'/>
-                  <a className="sidebarListItemText" href=''>
-                    Payments
-                  </a>
-              </li>
+              
               <br></br>
               <br></br>
               <br></br>
