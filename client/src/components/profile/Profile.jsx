@@ -1,19 +1,16 @@
-
 import React from 'react'
 import axios from 'axios'
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
 import  { useContext ,useState} from 'react'
 import { AuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Profile() {
 
-  const { user } = useContext(AuthContext);
-  const logout = () => {
-    localStorage.clear();
-    navigator("/login");
-  };
+export default function Profile() {
+  
+    const { user } = useContext(AuthContext);
+  
 
   const navigate = useNavigate();
     const [firstname, setFirstName] = useState(user.firstname);
@@ -116,4 +113,5 @@ export default function Profile() {
         
     
   )
+  
 }
