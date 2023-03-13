@@ -57,11 +57,11 @@ import { AuthContext } from "../context/AuthContext";
 
 export default function Dashboard() {
 
-  const { user } = useContext(AuthContext);
-  const logout = () => {
-    localStorage.clear();
-    navigator("/login");
-  };
+  // const { user } = useContext(AuthContext);
+  // const logout = () => {
+  //   localStorage.clear();
+  //   navigator("/login");
+  // };
 
   return (
     <div>
