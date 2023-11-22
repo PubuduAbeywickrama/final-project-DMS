@@ -29,7 +29,11 @@ router.post("/register", async (req, res) => {
       email: req.body.email,
       password: hashedPassword,
       phone: req.body.phone,
-      
+      age: req.body.age,
+      gender: req.body.gender,
+      weight: req.body.weight,
+      height: req.body.height,
+      bmi: req.body.bmi,
     });
     console.log(newUser.phone)
 
@@ -42,7 +46,6 @@ router.post("/register", async (req, res) => {
 });
 
 //Login
-
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });

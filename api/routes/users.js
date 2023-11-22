@@ -3,28 +3,42 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
 //update user
-router.put("/:id", async (req, res) => {
-  if (req.body.userId == req.params.id || req.user.isAdmin) {
-    if (req.body.password) {
-      try {
-        const salt = await bcrypt.genSalt(10);
-        req.body.password = await bcrypt.hash(req.body.password, salt);
-      } catch (error) {
-        return res.status(500).json(error);
-      }
+router.put("/:userId", async (req, res) => {
+  try {
+    // Validate request body
+    const { age, gender, weight, height, bmi } = req.body;
+    if (!age || !gender || !weight || !height || !bmi) {
+      return res.status(400).json({ error: "Incomplete data provided" });
     }
-    try {
-      const user = await User.findByIdAndUpdate(req.params.id, {
-        $set: req.body,
-      });
-      res.status(200).json("Account has been updated");
-    } catch (error) {
-      return res.status(500).json(error);
+
+    const updatedUser = await User.findOneAndUpdate(
+      { email: req.params.userId },
+      {
+        $set: {
+          age,
+          gender,
+          weight,
+          height,
+          bmi,
+          // Add other fields as needed
+        },
+      },
+      { new: true }
+    );
+
+    // Check if user was found
+    if (!updatedUser) {
+      return res.status(404).json({ error: "User not found" });
     }
-  } else {
-    return res.status(403).json("You can update only your account");
+
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    console.error("Error updating user:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
+
+
 //delete user
 router.delete("/:id", async (req, res) => {
   if (req.body.userId == req.params.id || req.body.isAdmin) {
@@ -54,25 +68,25 @@ router.get("/", async (req, res) => {
 });
 
 //update
-router.route("/:id").put(async(req, res) => {
-  let userId = req.params.id;
-  const {firstnamne,lastname,phone,email} = req.body;
+// router.route("/:id").put(async(req, res) => {
+//   let userId = req.params.id;
+//   const {firstnamne,lastname,phone,email} = req.body;
 
-  const updateStudent = {
-      firstnamne,
-      lastname,
-      phone,
-      email,
+//   const updateStudent = {
+//       firstnamne,
+//       lastname,
+//       phone,
+//       email,
       
-  }
+//   }
 
-  const update = await User.findByIdAndUpdate(userId, updateStudent)
-      .then(()=>{
-          res.status(200).send({status : "User Updated"});
-      })
-      .catch((err)=>{
-          res.status(500).send({status: "Error on update data"});
-      })
-})
+//   const update = await User.findByIdAndUpdate(userId, updateStudent)
+//       .then(()=>{
+//           res.status(200).send({status : "User Updated"});
+//       })
+//       .catch((err)=>{
+//           res.status(500).send({status: "Error on update data"});
+//       })
+// })
 
 module.exports = router;

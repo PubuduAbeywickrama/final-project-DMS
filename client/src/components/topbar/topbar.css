@@ -1,7 +1,7 @@
 .topbarContainer{
     height: 50px;
     width: 100%;
-    background-color: rgb(29, 29, 40);
+    background-color: rgba(0, 0, 0, 0.589);
     display: flex;
     align-items: center;
     position: sticky;
@@ -23,3 +23,11 @@
     background-color: rgb(9, 9, 9);
     border-bottom: 1px solid white;
 }
+.link {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+  }
+  .link :hover{
+    color: black;
+  }

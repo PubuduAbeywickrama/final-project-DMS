@@ -1,76 +1,43 @@
-// import React, { useContext } from "react";
-// import { Link } from "react-router-dom";
-// import { AuthContext } from "../context/AuthContext";
-// import "./Dashboard.css";
-
-// export const Dashboard = () => {
-//   const { user } = useContext(AuthContext);
-//   const logout = () => {
-//     localStorage.clear();
-//     navigator("/login");
-//   };
-//   return (
-//     <div>
-//       <div class="dashboard">
-//         <div class="navbar">
-//           <nav>
-//             <ul id="MenuItems">
-//               <li>
-//                 <a href="">Dashboard</a>
-//               </li>
-
-//               <li>
-//                 <Link
-//                   to={`/`}
-//                   onClick={logout}
-//                   // style={{ backgroundColor: "red", color: "white", padding: "20px" }}
-//                 >
-//                   Log Out
-//                 </Link>
-//               </li>
-//             </ul>
-//           </nav>
-//         </div>
-//         <div className="propDetails">
-//           <div>
-//             <img
-//               className="postProfileImg"
-//               src={"http://localhost:8800/images/" + user.image}
-//             ></img>
-//           </div>
-//           <div className="details">{user.firstname}</div>
-//           <div className="details">{user.lastname}</div>
-//           <div className="details">{user.email}</div>
-//           <div className="details">{user.phone}</div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-import React, { useContext } from 'react'
-import Feed from '../components/feed/Feed';
-import Sidebar from '../components/sidebar/Sidebar';
-import Topbar from '../components/topbar/Topbar'
-import { AuthContext } from "../context/AuthContext";
- import "./Dashboard.css";
+import React from 'react';
+import Topbar from '../components/topbar/Topbar';
+import gifImage from '../asserts/bot.gif';
+import askmeGif from '../asserts/askme.gif';
+import { Link } from 'react-router-dom';
+import './Dashboard.css'; // Make sure to add the appropriate styles in your CSS file
 
 export default function Dashboard() {
-
-  // const { user } = useContext(AuthContext);
-  // const logout = () => {
-  //   localStorage.clear();
-  //   navigator("/login");
-  // };
-
   return (
-    <div>
-        <Topbar/>
-        <div className="homeContainer">
-            <Sidebar/>
-            <Feed/>
+    <div className="dashboard-container">
+      <Topbar />
+      <div className="dashboard-content">
+        <div className="description-container">
+          <h1>Diabetes management: How lifestyle, daily routine affect blood sugar</h1>
+          <p>
+          Keeping your blood sugar levels within the range recommended by your doctor can be challenging. That's because many things make your blood sugar levels change, sometimes unexpectedly. Following are some factors that can affect your blood sugar levels.
+          </p>
         </div>
-    </div>
+        <div className="button-container">
+        <Link to="/home">
+          <button className="green-button">Check My Medical Report</button>
+        </Link>
+        <Link to="/medication">
+          <button className="blue-button">Doctor Consultation</button>
+        </Link>
+        </div>
+      </div>
+      <div className="dashboard-content-right">
+        <div className="gif-container">
 
-  )
+          
+          <Link to="/chatbot">
+            <img className='askmegif' src={askmeGif} alt="Your GIF" />
+          </Link>
+          <Link to="/chatbot">
+            <img className='botgif' src={gifImage} alt="Your GIF" />
+          </Link>
+        </div>
+      </div>
+        
+    </div>
+  );
 }
