@@ -1,70 +1,24 @@
 
-body {
-    background: linear-gradient(to right, #4ba1f8, #40268b);
-    width: 100vw; /* Change height to width for full width */
-    height: 100vh;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-      overflow-y: scroll;
-    }
-  
-    .container {
+    .input-container {
       display: flex;
       margin: 20px;
+      width: 100%;
     }
   
     .left-container {
-      width: 400px;
-      height: 400px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-right: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      font-size: 16px;
+      flex: 3;
+      /* background-color: #4caf50; */
+      height: 100px;
+      justify-content: center;
     }
     .right-container {
-      width: 400px;
-      height: 400px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-right: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      font-size: 18px;
+      height: 100px;
+     flex: 3;
+     display: flex;
+     /* justify-content: center; */
     }
   
-    .button {
-      border: 2px solid transparent;
-      border-radius: 20px;
-      padding: 10px;
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
   
-    .button:hover {
-      border-color: blue;
-    }
-  
-    .big-button {
-      border-width: 4px;
-      border-color: #4d4dff;
-      height: 60px;
-      font-size: 20px;
-      padding-bottom: 10px;
-    }
   
     .green-button {
       width: 100%;
@@ -72,33 +26,27 @@ body {
       color: white;
       font-size: 18px;
     }
-  .table-container {
-        width: 400px;
-        height: 300px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin-right: 20px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          font-size: 16px;
-          overflow-y: scroll;
-      }
   
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
+      
+      input {
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      
       }
-  
-      th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
+      
+      .add-button {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
       }
-  
-      th {
-        background-color: #f2f2f2;
+      
+      .add-button:hover {
+        background-color: #45a049;
       }
