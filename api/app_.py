@@ -18,7 +18,7 @@ class HealthRecommendation:
         self.health_data = pd.read_csv('health_data.csv', delimiter='\t')
 
         # Print column names for debugging
-        print("Columns in health dataset:", self.health_data.columns)
+        # print("Columns in health dataset:", self.health_data.columns)
 
     def preprocess_text(self, text):
         # Tokenize, remove stopwords, and perform stemming
@@ -28,24 +28,15 @@ class HealthRecommendation:
         return ' '.join(words)
 
     def recommend_health_condition(self, symptom):
-        # Print the content of the DataFrame for debugging
-        # print("Health dataset content:\n", self.health_data)
-
         # Preprocess the input symptom
         preprocessed_symptom = self.preprocess_text(symptom)
 
-        # Print the preprocessed symptom for debugging
-        # print("Preprocessed Symptom:", preprocessed_symptom)
-
         # Check if 'Symptoms' is in the columns
         if 'Symptoms' not in self.health_data.columns:
-            return {"Symptom": symptom, "Possible Disease": "Column 'Symptoms' not found", "Medicine": "Column 'Symptoms' not found"}
+            return {"Symptom": symptom, "PossibleDisease": "Column 'Symptoms' not found", "Medicine": "Column 'Symptoms' not found"}
 
         # Preprocess symptoms in the health dataset
         preprocessed_symptoms = [self.preprocess_text(sym) for sym in self.health_data['Symptoms']]
-
-        # Print the preprocessed symptoms for debugging
-        # print("Preprocessed Symptoms:", preprocessed_symptoms)
 
         # Create TF-IDF vectors
         vectorizer = TfidfVectorizer()
@@ -55,16 +46,16 @@ class HealthRecommendation:
         similarity_scores = cosine_similarity(vectors[0:1], vectors[1:]).flatten()
 
         if not similarity_scores.any():
-            return {"Symptom": symptom, "Possible Disease": "Not found", "Medicine": "Not found"}
+            return {"Symptom": symptom, "PossibleDisease": "Not found", "Medicine": "Not found"}
 
         # Find the index of the most similar health condition
         max_similarity_index = similarity_scores.argmax()
 
         # Access the recommended health condition and medicine from the DataFrame
-        recommended_disease = self.health_data['Possible Disease'][max_similarity_index]
-        recommended_medicine = self.health_data['Medicine'][max_similarity_index]
+        recommended_disease = self.health_data.loc[max_similarity_index, 'PossibleDisease']
+        recommended_medicine = self.health_data.loc[max_similarity_index, 'Medicine']
 
-        return {"Symptom": symptom, "Possible Disease": recommended_disease, "Medicine": recommended_medicine}
+        return {"Symptom": symptom, "PossibleDisease": recommended_disease, "Medicine": recommended_medicine}
 
 if __name__ == "__main__":
     # Extract symptom from command-line argument
@@ -76,5 +67,5 @@ if __name__ == "__main__":
     # Get recommended health condition and medicine for the symptom
     recommended_health_condition = health_rec.recommend_health_condition(symptom)
 
-    # Print the recommended health condition and medicine
+    # Print the recommended health condition and medicine in the desired format
     print(json.dumps(recommended_health_condition))

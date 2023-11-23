@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-
+import Topbar from '../topbar/Topbar';
+import './symptoms.css'
 const Symptoms = () => {
   const [symptomInput, setSymptomInput] = useState('');
   const [symptomsList, setSymptomsList] = useState([]);
@@ -21,9 +22,13 @@ const Symptoms = () => {
   };
 
   return (
-    <div>
+   
       <div>
+        <Topbar></Topbar>
         <div className="input-container">
+
+          <div className='left-container'>
+            <div>
             <input
             type="text"
             placeholder="Enter symptoms separated by commas"
@@ -33,25 +38,37 @@ const Symptoms = () => {
             <button className="add-button" onClick={handleAddSymptoms}>
             Add Symptoms
             </button>
-        </div>
-<h1>{symptomInput}</h1>
-        <div className="symptoms-container">
-            <div className="date-container">{currentDate}</div>
-            {symptomsList.length > 0 && (
-            <div>
-                <h2>Added Symptoms:</h2>
-                <ul>
-                {symptomsList.map((symptom, index) => (
-                    <li key={index}>{symptom}</li>
-                ))}
-                </ul>
             </div>
-            )}
+            <div>
+           <span>Symptom:<b>{symptomInput.Symptom}</b></span>
+        
+         </div>
+          </div>
+          <div className='right-container'>
+         
+         <div>
+        
+        <span>Possible Disease:<b>{symptomInput.PossibleDisease}</b></span>
+
+         </div>
+
+          </div>
+          <div className='right-container'>
+      
+      
+         <div>
+       
+        <span>Medicine:<b>{symptomInput.Medicine}</b></span>
+         </div>
+          </div>
+          
         </div>
+        
+     
       </div>
 
       
-    </div>
+    
   );
 };
 

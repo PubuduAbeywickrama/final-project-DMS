@@ -1,0 +1,102 @@
+﻿ID,Symptom,Medication Description
+1,I have Headache,Pain relief medication to alleviate headache symptoms.
+2,I have Sore Throat,Throat lozenges to soothe and relieve a sore throat.
+3,I have Fever,Medication to reduce fever and alleviate associated discomfort.
+4,I have Cough,Cough syrup to suppress coughing and promote rest.
+5,I have Nausea,Medication to prevent and alleviate nausea symptoms.
+6,I have Fatigue,Adequate rest is recommended to overcome fatigue and promote recovery.
+7,I have Rash,Topical cream to alleviate and soothe skin rashes.
+8,I have Stomach Pain,Antacids to neutralize stomach acid and alleviate pain.
+9,I have Runny Nose,Decongestant to relieve nasal congestion and improve breathing.
+10,I have Diarrhea,Medication to control and alleviate diarrhea symptoms.
+11,I have Muscle Ache,Pain relief medication to alleviate muscle ache symptoms.
+12,I have Insomnia,"Sleep aid medication, such as melatonin, to regulate sleep patterns."
+13,I have Dizziness,"Medication, such as meclizine, used to treat dizziness and motion sickness."
+14,I have Allergies,"Antihistamine, such as loratadine, used to relieve allergy symptoms."
+15,I have Chest Pain,Nitroglycerin used to relieve chest pain (angina) in heart conditions.
+16,I have Shortness of Breath,"Bronchodilator, such as albuterol, that helps with breathing difficulties."
+17,I have Back Pain,Ibuprofen can alleviate back pain and reduce inflammation.
+18,I have Migraine,"Migraine medication, such as sumatriptan, that narrows blood vessels."
+19,I have Vomiting,Ondansetron is used to prevent and treat vomiting.
+20,I have Joint Pain,"Nonsteroidal anti-inflammatory drug, such as naproxen, for joint pain."
+21,I have Indigestion,Antacid for indigestion relief.
+22,I have Dry Cough,Cough syrup with expectorant for dry cough relief.
+23,I have Sore Muscles,Pain relief cream for sore muscle relief.
+24,I have Itchy Eyes,Antihistamine eye drops for relief from itchy eyes.
+25,I have Constipation,Stool softener for gentle relief from constipation.
+26,I have Sunburn,Aloe vera gel for soothing sunburned skin.
+27,I have Hay Fever,Allergy medication for hay fever symptoms.
+28,I have Acid Reflux,Proton pump inhibitor for acid reflux relief.
+29,I have Insulin Resistance,Medication to manage insulin resistance symptoms.
+30,I have High Blood Pressure,Antihypertensive medication for managing high blood pressure.
+31,I have Erectile Dysfunction,Phosphodiesterase inhibitor for managing erectile dysfunction.
+32,I have Allergic Rhinitis,Intranasal corticosteroid for allergic rhinitis symptoms.
+33,I have Urinary Tract Infection,Antibiotics for treating urinary tract infections.
+34,I have Acne,Topical acne medication for managing acne symptoms.
+35,I have Menstrual Cramps,Nonsteroidal anti-inflammatory drug for relieving menstrual cramps.
+36,I have Asthma,Inhaled bronchodilator for managing asthma symptoms.
+37,I have Insulin Dependent Diabetes,Insulin therapy for managing insulin-dependent diabetes.
+38,I have Osteoarthritis,Analgesic medication for managing osteoarthritis pain.
+39,I have Allergic Conjunctivitis,Antihistamine eye drops for allergic conjunctivitis relief.
+40,I have Gastroenteritis,Oral rehydration solution for managing gastroenteritis symptoms.
+41,I have Hyperthyroidism,Antithyroid medication for managing hyperthyroidism.
+42,I have Insulinoma,Medication to manage symptoms of insulinoma.
+43,I have Psoriasis,Topical corticosteroid for managing psoriasis symptoms.
+44,I have Bipolar Disorder,Mood stabilizer for managing bipolar disorder symptoms.
+45,I have Premenstrual Syndrome (PMS),Over-the-counter pain reliever for managing PMS symptoms.
+46,I have Malaria,Antimalarial medication for treating and preventing malaria.
+47,I have Parkinson's Disease,Dopamine agonist for managing Parkinson's disease symptoms.
+48,I have Irritable Bowel Syndrome (IBS),Fiber supplement for managing IBS symptoms.
+49,I have Seasonal Affective Disorder (SAD),Light therapy for managing seasonal affective disorder symptoms.
+50,I have Social Anxiety Disorder,Selective serotonin reuptake inhibitor (SSRI) for managing social anxiety disorder.
+51,I have Obsessive-Compulsive Disorder (OCD),Serotonin-norepinephrine reuptake inhibitor (SNRI) for managing OCD symptoms.
+52,I have Attention-Deficit/Hyperactivity Disorder (ADHD),Stimulant medication for managing ADHD symptoms.
+53,I have Alzheimer's Disease,Cholinesterase inhibitor for managing Alzheimer's disease symptoms.
+54,I have Rheumatoid Arthritis,Disease-modifying antirheumatic drug (DMARD) for managing rheumatoid arthritis.
+55,I have Glaucoma,Topical medication for managing intraocular pressure in glaucoma.
+56,I have Epilepsy,Antiepileptic medication for managing epilepsy symptoms.
+57,I have Chronic Obstructive Pulmonary Disease (COPD),Long-acting bronchodilator for managing COPD symptoms.
+58,I have Gout,Colchicine for managing acute gout attacks.
+59,I have Hypothyroidism,Levothyroxine for managing hypothyroidism symptoms.
+60,I have Multiple Sclerosis,Disease-modifying therapy for managing multiple sclerosis symptoms.
+61,I have Tuberculosis,Antibiotics for treating tuberculosis.
+62,I have Schizophrenia,Antipsychotic medication for managing schizophrenia symptoms.
+63,I have Anemia,Iron supplement for managing anemia.
+64,I have Coronary Artery Disease,Antiplatelet medication for managing coronary artery disease.
+65,I have Inflammatory Bowel Disease (IBD),Immunosuppressant for managing IBD symptoms.
+66,I have Chronic Kidney Disease,Angiotensin-converting enzyme (ACE) inhibitor for managing CKD symptoms.
+67,I have Endometriosis,Oral contraceptives for managing endometriosis symptoms.
+68,I have Hypertrophic Cardiomyopathy,Beta-blocker for managing hypertrophic cardiomyopathy symptoms.
+69,I have Fibromyalgia,Pain medication for managing fibromyalgia symptoms.
+70,I have Pancreatitis,Pancreatic enzyme replacement for managing pancreatitis symptoms.
+71,I have Opioid Dependence,Opioid replacement therapy for managing opioid dependence.
+72,I have Celiac Disease,Gluten-free diet for managing celiac disease symptoms.
+73,I have Sleep Apnea,Continuous positive airway pressure (CPAP) therapy for managing sleep apnea.
+74,I have Wilson's Disease,Chelating agent for managing copper accumulation in Wilson's disease.
+75,I have Polycystic Ovary Syndrome (PCOS),Oral contraceptives for managing PCOS symptoms.
+76,I have Hidradenitis Suppurativa,Topical or systemic antibiotics for managing hidradenitis suppurativa.
+77,I have Myasthenia Gravis,Cholinesterase inhibitor for managing myasthenia gravis symptoms.
+78,I have Amyotrophic Lateral Sclerosis (ALS),Riluzole for managing ALS symptoms.
+79,I have Ovarian Cancer,Chemotherapy for treating ovarian cancer.
+80,I have Testicular Cancer,Radiation therapy or chemotherapy for treating testicular cancer.
+81,I have Hepatitis C,Antiviral medication for treating hepatitis C.
+82,I have HIV/AIDS,Antiretroviral therapy (ART) for managing HIV/AIDS.
+83,I have Prostate Cancer,Hormone therapy or surgery for treating prostate cancer.
+84,I have Breast Cancer,"Chemotherapy, radiation therapy, or surgery for treating breast cancer."
+85,I have Colon Cancer,"Chemotherapy, radiation therapy, or surgery for treating colon cancer."
+86,I have Lung Cancer,"Chemotherapy, radiation therapy, or surgery for treating lung cancer."
+87,I have Leukemia,"Chemotherapy, targeted therapy, or stem cell transplant for treating leukemia."
+88,I have Osteosarcoma,Chemotherapy and surgery for treating osteosarcoma.
+89,I have Pancreatic Cancer,"Chemotherapy, radiation therapy, or surgery for treating pancreatic cancer."
+90,I have Rheumatoid Lung Disease,Immunosuppressant medication for managing rheumatoid lung disease.
+91,I have Non-Hodgkin Lymphoma,"Chemotherapy, immunotherapy, or radiation therapy for treating non-Hodgkin lymphoma."
+92,I have Systemic Lupus Erythematosus (SLE),Immunosuppressant medication for managing SLE symptoms.
+93,I have Atrial Fibrillation,Anticoagulant medication for managing atrial fibrillation.
+94,I have Melanoma,"Immunotherapy, targeted therapy, or surgery for treating melanoma."
+95,I have Bladder Cancer,"Chemotherapy, immunotherapy, or surgery for treating bladder cancer."
+96,I have Ovarian Cyst,Pain medication or hormonal therapy for managing ovarian cyst symptoms.
+97,I have Uterine Fibroids,Hormonal therapy or surgery for managing uterine fibroids.
+98,I have Gastroesophageal Reflux Disease (GERD),Proton pump inhibitor for managing GERD symptoms.
+99,I have Carpal Tunnel Syndrome,"Brace, physical therapy, or surgery for managing carpal tunnel syndrome."
+100,I have Tennis Elbow,"Rest, ice, and anti-inflammatory medication for managing tennis elbow."
+...,...,...

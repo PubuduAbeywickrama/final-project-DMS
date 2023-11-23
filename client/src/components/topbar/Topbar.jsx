@@ -169,7 +169,7 @@ export default function Topbar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            Diabetic Management System
+            Medical Report System
             <Link to="/" className="link">Home</Link>
             
             <Link to="/doctors" className="link">Doctors</Link>
