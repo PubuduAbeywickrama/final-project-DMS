@@ -171,8 +171,9 @@ export default function Topbar() {
           >
             Diabetic Management System
             <Link to="/" className="link">Home</Link>
-            <Link to="/home" className="link">GlucoBoard</Link>
-            <Link to="/medication" className="link">Medication</Link>
+            
+            <Link to="/doctors" className="link">Doctors</Link>
+            <Link to="/symptoms" className="link">Symptoms</Link>
             <Link to="/chatbot" className="link">Chat with Me</Link>
           </Typography>
         

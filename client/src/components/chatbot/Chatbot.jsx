@@ -17,8 +17,8 @@ const Chatbot = () => {
     // Update conversation history with user's message and bot's response
     setConversation([
       ...conversation,
-      { role: 'user', text: userMessage, label: 'You :: ' },
-      { role: 'bot', text: response.data.bot_response, label: 'ChatBOT :: ' },
+      { role: 'user', text: userMessage},
+      { role: 'bot', text: response.data.bot_response},
     ]);
 
     // Clear user input
@@ -31,10 +31,10 @@ const Chatbot = () => {
     <div className="chatbot-container">
         
       {/* Conversation history */}
-      <div className="conversation-container">
+      <div style={{marginTop:'150px'}} className="conversation-container">
         {conversation.map((message, index) => (
           <div key={index} className={message.role}>
-            <span className="label">{message.label}</span>
+          
             <div className="message">{message.text}</div>
             {index < conversation.length - 1 && <div className="divider" />}
           </div>

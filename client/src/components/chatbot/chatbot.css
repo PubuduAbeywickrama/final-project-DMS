@@ -1,66 +1,74 @@
 /* Chatbot.css */
 .back-container{
+  
   background: linear-gradient(to right, #4ba1f8, #40268b);
   width: 100vw; /* Change height to width for full width */
-  height: 100vh;
+  
 }
+/* chatbot.css */
+
 .chatbot-container {
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-    height: 80%;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 0 auto; /* Center the container horizontally */
-  }
+  width: 800px;
+  margin: auto;
+  height: 800px;
   
-  .conversation-container {
-    margin-top: 50px;
-    height: 700px;
-    flex: 1;
-    overflow-y: auto;
-    background-color: rgb(66, 65, 64);
-    border-radius: 20px;
-    padding: 20px;
-    color: #ffffff;
-  }
-  
-  .user-input-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  input {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 20px 0 0 20px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 0 20px 20px 0;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .label {
-    font-weight: bold;
-    margin-right: 5px;
-  }
-  
-  .message {
-    font-size: 16px;
-  }
-  
-  .divider {
-    border-bottom: 1px solid #ffffff;
-    margin: 10px 0;
-  }
-  
+  overflow: hidden;
+}
+
+.conversation-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  height: 500px;
+  overflow-y: scroll;
+  margin-bottom: 50px;
+}
+
+.user,
+.bot {
+  margin: 5px 0;
+}
+
+.user .label,
+.bot .label {
+  font-weight: bold;
+}
+
+.user .message {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10px;
+  padding: 8px;
+  margin-left: auto; /* Align to the right */
+  width: 400px;
+}
+
+.bot .message {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 8px;
+  margin-right: auto; /* Align to the left */
+  width: 500px;
+}
+
+.user-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.user-input-container input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.user-input-container button {
+  padding: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

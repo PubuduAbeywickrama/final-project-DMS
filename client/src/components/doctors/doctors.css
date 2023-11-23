@@ -1,0 +1,70 @@
+body{
+  margin: auto;
+}
+.doctor-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+  
+  .doctor-card {
+    width: 300px;
+    height: 500px;
+    background-color: rgb(148, 238, 229);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .doctor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .doctor-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-card p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .doctor-card li {
+    margin-bottom: 5px;
+  }
+  /* doctors.css */
+
+.doctor-card {
+  /* Your existing styles for the front side of the card */
+  transform-style: preserve-3d;
+}
+
+.doctor-card.flipped {
+  transform: rotateY(180deg);
+  /* Add any additional styles for the flipped card here */
+}
+
+/* Add styling for the booking form on the back side as needed */
+.booking-form {
+  /* Add your styling for the booking form here */
+  transform-style: preserve-3d;
+}
+.doctor-card {
+  z-index: 2;
+  /* Other styles */
+}
+
+.doctor-card.flipped,
+.booking-form {
+  z-index: 1;
+  /* Other styles */
+}

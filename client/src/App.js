@@ -11,6 +11,8 @@ import Dashboard from './pages/Dashboard';
 import Profile from './components/profile/Profile';
 import Home from './components/home/Home';
 import Chatbot from './components/chatbot/Chatbot';
+import Doctors from './components/doctors/Doctors';
+import Symptoms from './components/symptoms/Symptoms';
 
 
 
@@ -29,6 +31,8 @@ function App() {
        <Route path='medication' element={<Medication/>}/>
        <Route path='profile' element={<Profile/>}/>
        <Route path='chatbot' element={<Chatbot/>}/>
+       <Route path='doctors' element={<Doctors/>}/>
+       <Route path='symptoms' element={<Symptoms/>}/>
     </Routes>
   </BrowserRouter>
 

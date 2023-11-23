@@ -12,7 +12,7 @@ class ChatbotApp:
     def __init__(self):
         self.app = Flask(__name__)
         self.nlp_model = spacy.load("en_core_web_sm")
-        self.dataset = self.load_dataset_from_csv("./data.csv")
+        self.dataset = self.load_dataset_from_csv("./health_data.csv")
         self.matcher = Matcher(self.nlp_model.vocab)
         self.setup_patterns()  # Call setup_patterns during initialization
         self.setup_cors()
